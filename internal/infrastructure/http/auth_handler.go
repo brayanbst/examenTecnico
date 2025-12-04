@@ -53,10 +53,10 @@ func (h *AuthHandler) PostLogin(c *fiber.Ctx) error {
 
 	// Claims del token
 	claims := jwt.MapClaims{
-		"sub":  req.Username,                               // subject (usuario)
-		"role": "admin",                                    // ejemplo de rol
-		"exp":  time.Now().Add(1 * time.Hour).Unix(),       // expira en 1 hora
-		"iat":  time.Now().Unix(),                          // emitido en
+		"sub":  req.Username,                         // subject (usuario)
+		"role": "admin",                              // ejemplo de rol
+		"exp":  time.Now().Add(1 * time.Hour).Unix(), // expira en 1 hora
+		"iat":  time.Now().Unix(),                    // emitido en
 	}
 
 	// Crear token

@@ -11,14 +11,12 @@ import (
 )
 
 // errorResponse es una versión mínima local del formato estándar de respuesta.
-// Lo definimos aquí para evitar importar el paquete httpinfra y generar ciclos.
 type errorResponse struct {
 	Code    string      `json:"code"`
 	Message string      `json:"message"`
 	Data    interface{} `json:"data,omitempty"`
 }
 
-// newErrorResponse crea una respuesta de error con code = "001".
 func newErrorResponse(message string) errorResponse {
 	return errorResponse{
 		Code:    "001",
