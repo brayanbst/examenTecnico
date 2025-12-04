@@ -1,0 +1,13 @@
+# Go
+bin/
+*.exe
+
+# Node
+node_modules/
+npm-debug.log
+
+# OS / editor
+.DS_Store
+*.log
+.idea/
+.vscode/
